@@ -1,6 +1,6 @@
 **This repo is supposed to be used as config by NvChad v2 users!**
 
-- require neovim version 0.11.5+
+- require neovim version 0.11.4+
 - The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
 - So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
 - So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
