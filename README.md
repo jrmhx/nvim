@@ -11,7 +11,7 @@ https://neovim.io/doc2/install/
 
 https://nvchad.com/docs/quickstart/install
 
-on debian
+install neovim on debian
 ```shell
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 chmod u+x nvim-linux-x86_64.appimage
