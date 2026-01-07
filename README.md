@@ -6,7 +6,9 @@
 - So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
 
 # Install Neovim and NvChad
+
 https://neovim.io/doc2/install/
+
 https://nvchad.com/docs/quickstart/install
 
 on debian
