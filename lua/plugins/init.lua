@@ -14,7 +14,6 @@ return {
   },
   {
     "mason-org/mason.nvim",
-    lazy = false,
     opts = {
       ensure_installed = {
         "clangd",
@@ -25,6 +24,7 @@ return {
   },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
+    lazy = false,
     dependencies = {
       "williamboman/mason.nvim",
     },
