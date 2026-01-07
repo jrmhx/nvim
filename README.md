@@ -20,10 +20,11 @@ sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 
 ## Features
 
-[x] lsp for lua/c/cpp/go
-[x] formatter for lua/c/cpp/go
-[x] debugger for c/cpp/go
-[] support for cmake/makefile
+- [x] lsp for lua/c/cpp/go
+- [x] formatter for lua/c/cpp/go
+- [x] debugger for c/cpp/go
+- [ ] support for cmake/makefile
+
 
 
 ## Credits
