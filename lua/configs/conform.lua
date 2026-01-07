@@ -1,15 +1,25 @@
 local options = {
   formatters_by_ft = {
+    c = { "clang-format" },
+    cpp = { "clang-format" },
+    objc = { "clang-format" },
+    cuda = { "clang-format" },
+
+    -- Use Go's native formatter
+    go = { "gofumpt" },
+
+    -- Lua formatter
     lua = { "stylua" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
   },
 
-  -- format_on_save = {
-  --   -- These options will be passed to conform.format()
-  --   timeout_ms = 500,
-  --   lsp_fallback = true,
-  -- },
+  format_on_save = {
+    timeout_ms = 500,
+
+    -- Do NOT fall back to LSP formatting
+    -- This avoids conflicts with clangd / gopls
+    lsp_fallback = false,
+  },
 }
 
 return options
+
