@@ -30,7 +30,6 @@ return {
       end
     end,
   },
-
   {
     "jay-babu/mason-nvim-dap.nvim",
     event = "VeryLazy",
@@ -47,8 +46,6 @@ return {
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
-
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -68,6 +65,24 @@ return {
       },
     },
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "c",
+        "cpp",
+        "go",
+        "lua",
+        "vim",
+        "vimdoc",
+      },
+    },
+  },
+  {
+    "lambdalisue/vim-suda",
+    cmd = { "SudaWrite", "SudaRead" },
+  },
+  -- These are some examples, uncomment them if you want to see them work!
   -- {
   --   "WhoIsSethDaniel/mason-tool-installer.nvim",
   --   lazy = false,
@@ -87,18 +102,4 @@ return {
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "c",
-        "cpp",
-        "go",
-        "lua",
-        "vim",
-        "vimdoc",
-      },
-    },
-  },
 }
