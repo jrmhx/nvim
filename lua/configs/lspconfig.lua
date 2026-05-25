@@ -3,19 +3,6 @@
 -- load NvChad default LSP configs like keymaps capabilities
 require("nvchad.configs.lspconfig").defaults()
 
--- the LSP servers we need to load（name must be same as in lspconfig）
-local servers = {
-  "html",
-  "cssls",
-  "clangd",
-  "gopls",
-  "basedpyright",
-  "ruff",
-}
-
--- enable lsp by vim.lsp 
-vim.lsp.enable(servers)
-
 -- clangd
 vim.lsp.config("clangd", {
   cmd = {
@@ -48,3 +35,27 @@ vim.lsp.config("gopls", {
     },
   },
 })
+
+vim.lsp.config("basedpyright", {
+  settings = {
+    basedpyright = {
+      analysis = {
+        typeCheckingMode = "basic",
+      },
+    },
+  },
+})
+
+
+-- the LSP servers we need to load（name must be same as in lspconfig）
+local servers = {
+  "html",
+  "cssls",
+  "clangd",
+  "gopls",
+  "basedpyright",
+  "ruff",
+}
+
+-- enable lsp by vim.lsp 
+vim.lsp.enable(servers)
