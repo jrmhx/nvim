@@ -9,6 +9,8 @@ local servers = {
   "cssls",
   "clangd",
   "gopls",
+  "basedpyright",
+  "ruff",
 }
 
 -- enable lsp by vim.lsp 
