@@ -10,16 +10,19 @@ local options = {
 
     -- Lua formatter
     lua = { "stylua" },
+
+    -- C# formatter. Roslyn still provides completion and automatic `using`
+    -- imports; CSharpier keeps formatting deterministic across editors.
+    cs = { "csharpier" },
   },
 
   format_on_save = {
-    timeout_ms = 500,
+    timeout_ms = 2000,
 
-    -- Do NOT fall back to LSP formatting
-    -- This avoids conflicts with clangd / gopls
+    -- Do not fall back to LSP formatting. Every auto-formatted language above
+    -- has one explicit formatter, which avoids two formatters fighting.
     lsp_fallback = false,
   },
 }
 
 return options
-

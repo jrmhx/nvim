@@ -49,3 +49,6 @@ dap.configurations.go = {
     program = "${file}",
   },
 }
+
+-- C# is configured by mason-nvim-dap's `coreclr` adapter. It uses netcoredbg
+-- and prompts for a built DLL when a debug session starts.

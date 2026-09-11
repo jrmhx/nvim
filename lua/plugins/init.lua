@@ -38,12 +38,13 @@ return {
       "mfussenegger/nvim-dap",
     },
     opts = {
+      ensure_installed = { "coreclr" },
       handlers = {},
     },
   },
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
   {
@@ -54,6 +55,11 @@ return {
   },
   {
     "mason-org/mason.nvim",
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    lazy = false,
+    dependencies = { "mason-org/mason.nvim" },
     opts = {
       ensure_installed = {
         "clangd",
@@ -62,7 +68,12 @@ return {
         "gofumpt",
         "codelldb",
         "delve",
+        "roslyn-language-server",
+        "csharpier",
       },
+      run_on_start = true,
+      start_delay = 3000,
+      debounce_hours = 24,
     },
   },
   {
@@ -71,6 +82,7 @@ return {
       ensure_installed = {
         "c",
         "cpp",
+        "c_sharp",
         "go",
         "lua",
         "vim",
@@ -82,24 +94,6 @@ return {
     "lambdalisue/vim-suda",
     cmd = { "SudaWrite", "SudaRead" },
   },
-  -- These are some examples, uncomment them if you want to see them work!
-  -- {
-  --   "WhoIsSethDaniel/mason-tool-installer.nvim",
-  --   lazy = false,
-  --   dependencies = {
-  --     "mason-org/mason.nvim",
-  --   },
-  --   opts = {
-  --     ensure_installed = {
-  --       "clangd",
-  --       "gopls",
-  --       "clang-format",
-  --       "gofumpt",
-  --     },
-  --     run_on_start = true,
-  --   },
-  -- },
-
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 }
