@@ -169,6 +169,7 @@ The first launch installs:
 
 - `roslyn-language-server` for Roslyn completion, navigation, diagnostics,
   code actions, automatic `using` imports, and inlay hints
+- `csharpier` for deterministic formatting on save
 - `netcoredbg` (the `coreclr` adapter in mason-nvim-dap) for .NET debugging
 - The Treesitter `c_sharp` parser for syntax highlighting
 
@@ -188,9 +189,8 @@ have not yet been imported; accepting one of those completion items with
 an unresolved symbol and use `gra` to select a Roslyn code action. Inlay hints
 are enabled automatically when Roslyn attaches.
 
-Saving a C# file asks Roslyn to format it, applying the C# and .NET formatting
-rules from the project's `.editorconfig`. Use `<leader>fm` (`Space f m`) to
-format the current file or a visual selection manually.
+Saving a C# file runs CSharpier. Use `<leader>fm` (`Space f m`) to format the
+current file or a visual selection manually.
 
 ### Build, run, and test
 

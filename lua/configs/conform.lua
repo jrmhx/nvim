@@ -11,8 +11,9 @@ local options = {
     -- Lua formatter
     lua = { "stylua" },
 
-    -- Roslyn honors the project's full C#/.NET .editorconfig rule set.
-    cs = { lsp_format = "prefer" },
+    -- Roslyn still provides completion and automatic `using` imports;
+    -- CSharpier keeps formatting deterministic across editors.
+    cs = { "csharpier" },
   },
 
   format_on_save = {

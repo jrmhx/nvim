@@ -69,6 +69,7 @@ return {
         "codelldb",
         "delve",
         "roslyn-language-server",
+        "csharpier",
       },
       run_on_start = true,
       start_delay = 3000,
